@@ -1,20 +1,24 @@
 require "Minitest/autorun"
 require "Minitest/pride"
 require "./EmployeeDirectory.rb"
+require "./DepartmentDirectory.rb"
 
-class Department_Test < Minitest::Test
-  def department
-    ::Employees.new( @name, @salary, @department )
+class Company_Test < Minitest::Test
+  def employee_information
+    ::Employees.new( @name, @email_address, @salary, @cell_number )
   end
 
-  def test_department_presence
-    assert department
+  def test_employee_presence
+    assert employee_information
   end
   def test_salary_of_employees
-    assert department
+    assert employee_information
   end
   def test_on_boarding
-    assert department
+    assert employee_information
+  end
+  def test_employee_number
+    assert employee_information
   end
 
 
