@@ -26,11 +26,11 @@ class Company_Test < Minitest::Test
 
   def test_new_department
     hr = Departmentname.new(:HR)
-    assert_equal [:HR], hr.new_department
+    assert_equal :HR, hr.new_department
   end
   def test_new_employee_to_directory
-    alex = Employees.new("alex", "alex.alex@email.com", 2, "111-111-1111")
-    assert alex, new_employees
+    alex = Departmentname.new(:IT)
+    assert "alex", alex.new_department
   end
 end
 
