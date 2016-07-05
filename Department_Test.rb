@@ -4,6 +4,8 @@ require "./EmployeeDirectory.rb"    # ~> LoadError: cannot load such file -- ./E
 require "./DepartmentDirectory.rb"
 
 class Company_Test < Minitest::Test
+
+
   def test_employee_monies
     alex = Employees.new("alex", "alex.alex@email.com", 2, "111-111-1111")
     assert_equal 2, alex.salary
@@ -24,13 +26,16 @@ class Company_Test < Minitest::Test
     assert_equal "111-111-1111", alex.cell_number
   end
 
-  def test_new_department
-    hr = Departmentname.new(:HR)
-    assert_equal :HR, hr.new_department
+  def test_department_name
+    hr = Dept.new(:HR)
+    assert_equal :HR, hr.name
   end
-  def test_new_employee_to_directory
-    alex = Departmentname.new(:IT)
-    assert "alex", alex.new_department
+
+  def test_new_employee_to_department
+    it = Dept.new(:IT)
+    alex = Employees.new("alex", "alex.alex@email.com", 2, "111-111-1111")
+    it.add_employee(alex)
+    assert_equal 
   end
 end
 

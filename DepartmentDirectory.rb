@@ -1,15 +1,17 @@
-class Departmentname
+class Dept
 
-  def initialize (new_department)
-    @new_department = new_department  # => :HR, :FIN, :SUP, :IT
-  end                                 # => :initialize
+  def initialize (name)
+    @name = name              # => :HR, :FIN, :SUP, :IT
+  end                         # => :initialize
+  def add_employee(employee)
+  end                         # => :add_employee
 
-  def new_department
-    @new_department
-  end                 # => :new_department
+  def name
+    @name
+  end       # => :name
 
-end                                        # => :new_department
-human_resources = Departmentname.new(:HR)  # => #<Departmentname:0x007f9edb823a80 @new_department=:HR>
-finance = Departmentname.new(:FIN)         # => #<Departmentname:0x007f9edb81bcb8 @new_department=:FIN>
-supply_chain = Departmentname.new(:SUP)    # => #<Departmentname:0x007f9edb81b880 @new_department=:SUP>
-it_department = Departmentname.new(:IT)    # => #<Departmentname:0x007f9edb81b498 @new_department=:IT>
+end                              # => :name
+human_resources = Dept.new(:HR)  # => #<Dept:0x007faf0a01bb78 @name=:HR>
+finance = Dept.new(:FIN)         # => #<Dept:0x007faf0a01b6f0 @name=:FIN>
+supply_chain = Dept.new(:SUP)    # => #<Dept:0x007faf0a01b2b8 @name=:SUP>
+it_department = Dept.new(:IT)    # => #<Dept:0x007faf0a01ae08 @name=:IT>
