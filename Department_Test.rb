@@ -35,7 +35,7 @@ class Company_Test < Minitest::Test
     it = Dept.new(:IT)
     alex = Employees.new("alex", "alex.alex@email.com", 2, "111-111-1111")
     it.add_employee(alex)
-    assert_equal 
+    assert_equal [ alex ], it.departments
   end
 
   def test_obtaining_all_salaries_from_dept

@@ -3,16 +3,17 @@ require_relative "./EmployeeDirectory.rb"  # => true
 employee = ["alex", "rick", "steve", "betty", "maggy"]  # => ["alex", "rick", "steve", "betty", "maggy"]
 class Dept
 
+  attr_reader :name
+  attr_reader :departments
+
   def initialize (name)
     @name = name
-    @employees = []
+    @departments = []
   end                         # => :initialize
-  def add_employee(employee)
-   @employees.push employee
-end                           # => :add_employee
 
-  def name
-    @name
-  end       # => :name
+  def add_employee(employee)
+   @departments << employee
+  end                           # => :add_employee
+   # => :name
 
 end  # => :name
