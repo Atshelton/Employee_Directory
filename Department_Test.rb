@@ -1,7 +1,7 @@
-require "Minitest/autorun"          # => true
-require "Minitest/pride"            # => true
-require "./EmployeeDirectory.rb"    # ~> LoadError: cannot load such file -- ./EmployeeDirectory.rb
-require "./DepartmentDirectory.rb"
+require "Minitest/autorun"
+require "Minitest/pride"
+require_relative "./EmployeeDirectory.rb"
+require_relative "./DepartmentDirectory.rb"
 
 class Company_Test < Minitest::Test
 
@@ -37,11 +37,22 @@ class Company_Test < Minitest::Test
     it.add_employee(alex)
     assert_equal 
   end
-end
 
-# ~> LoadError
-# ~> cannot load such file -- ./EmployeeDirectory.rb
-# ~>
-# ~> /Users/alexshelton/.rbenv/versions/2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
-# ~> /Users/alexshelton/.rbenv/versions/2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
-# ~> /Users/alexshelton/Desktop/Employee_Directory/Department_Test.rb:3:in `<main>'
+  def test_obtaining_all_salaries_from_dept
+  end
+
+  def test_creat_new_employee
+  end
+
+  def test_give_raise_to_employee
+  end
+
+  def test_employee_review
+  end
+
+  def test_satisfactory_or_unsatisfactory_performance
+  end
+
+  def test_give_raise_to_department
+  end
+end
